@@ -1,0 +1,141 @@
+.fixed-top.scrolled {
+  background-color: white !important;
+  border: 2px solid black !important;
+  transition: all 0.5s ease;
+}
+
+.scrolled .nav-link {
+  color: black !important;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: black;
+}
+
+.green {
+  border-radius: 10px;
+}
+
+.scrolled .navbar-nav .nav-link:hover {
+  background-color: grey;
+}
+
+@media screen and (min-width: 992px) {
+  .red {
+    position: relative;
+    top: 80px;
+  }
+  .blue {
+    position: relative;
+    bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #343a40;
+    transition: all 0.5s ease;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .scrolled .navbar-collapse {
+    background-color: #f2f2f2 !important;
+    transition: all 0.5s ease;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .fixed-top.scrolled {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .reverse-flex {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+body {
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #e7e7e7;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: 2px solid #e7e7e7;
+  border-radius: 25px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e7e7e7;
+}
+
+.diff::-webkit-scrollbar {
+  background-color: #e7e7e7;
+}
+
+.diff::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: 2px solid #e7e7e7;
+  border-radius: 25px;
+}
+
+.diff::-webkit-scrollbar-track {
+  background-color: #e7e7e7;
+}
+
+#first-letter::first-letter {
+  font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1252 - 320)));
+}
+
+.gradient-box {
+  --borderWidth: 3px;
+  background: white;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+.gradient-box::after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    45deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: color 1s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
